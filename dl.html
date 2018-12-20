@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Mods - JGSBroadcast</title>
+		<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="css/main.css" type="text/css" />
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+		<meta charset="utf-8" />
+		<!--Icons-->
+    <script defer src="js/fontawesome-all.min.js"></script>
+	</head>
+	<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">JGSBroadcast</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./">Home</a></li>
+            <li><a href="maps">Maps</a></li>
+            <li><a href="mods">Mods</a></li>
+            <li><a href="about">About Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+		<div class="main container full-page">
+			<h1>&nbsp;</h1>
+	    <center>
+        <button class="btn btn-danger" onclick="showmaps()">Maps</button>
+        <button class="btn btn-danger" onclick="showmods()">Mods</button>
+	    </center>
+	    <div id="maps" style="display: none;">
+        <center>
+          <h3>Maps</h3>
+          <button class="btn btn-danger" onclick="window.location = 'https://dl.dropboxusercontent.com/s/crznhhtjv6ip3vm/Island%20Defenders%20By%20RealJGSB.zip?dl=1&token_hash=AAG1_k_RFolS_LeLYN-5G7HztJtQUSTtsK_5Tc3YORtp4A'">Island Defenders</button>
+          <button class="btn btn-danger" onclick="window.location = 'https://dl.dropboxusercontent.com/s/t357nfypk2sz88s/PowerUPSpleef%20By%20RealJGSB.zip?dl=1&token_hash=AAE-WwMhcYqAIs9bfDHbp62LmWNAYv6pDVcqZTiLuo3_gA'">Power UP Spleef</button>
+          <button class="btn btn-danger" onclick="window.location = 'https://dl.dropboxusercontent.com/s/i8rnnci954kgfcr/Sniper%20Mob%20By%20RealJGSB.zip?dl=1&token_hash=AAGBIo8puv4XaKy4LUYlV1y2LMUVhZUfKhk9tu3dFgS8Gw'">Sniper Mob</button>
+        </center>
+	    </div>
+	    <div id="mods" style="display: none;">
+        <center>
+          <h3>Mods</h3>
+          <h3>Minecraft Version:
+            <select id="mcversion" onchange="changemcversion()" style="width: 105px;">
+              <option value="1.11.2">1.11.2</option>
+              <option value="1.11">1.11</option>
+              <option value="1.10.2">1.10.2</option>
+              <option value="1.9.4">1.9.4</option>
+              <option value="1.8.9">1.8.9</option>
+              <option value="1.7.10">1.7.10</option>
+              <option value="All">All</option>
+            </select>
+          </h3>
+          <button class="btn btn-danger" onclick="changemod('Dessertcraft')">Dessertcraft</button>
+          <button class="btn btn-danger" onclick="changemod('Emerald Tools')">Emerald Tools</button>
+          <button class="btn btn-danger" onclick="changemod('Extra Food')">Extra Food</button>
+          <button class="btn btn-danger" onclick="changemod('Obsidian Utilities')">Obsidian Utilities</button>
+          <button class="btn btn-danger" onclick="changemod('Halloween Mod')">Halloween Mod</button>
+          <button class="btn btn-danger" onclick="changemod('InstaPlay')">InstaPlay</button>
+        </center>
+        <div id="1.11.2 Dessertcraft" class="Dessertcraft">
+          <center>
+            <h3>Dessertcraft 1.11.2</h3>
+            <a href="http://riffhold.com/26VR">v1.6</a><br>
+            <a href="http://adf.ly/1l25Fe">v1.5.1</a><br>
+            <a href="http://adf.ly/1kysPG">v1.5</a><br>
+          </center>
+        </div>
+        <div id="1.11 Dessertcraft" class="Dessertcraft" style="display: none;">
+          <center>
+            <h3>Dessertcraft 1.11</h3>
+            <a href="http://adf.ly/1eceFM">v1.4</a><br>
+          </center>
+        </div>
+        <div id="1.10.2 Dessertcraft" class="Dessertcraft" style="display: none;">
+          <center>
+            <h3>Dessertcraft 1.10.2</h3>
+            <a href="http://riffhold.com/26VC">v1.6</a><br>
+            <a href="http://adf.ly/1l25DL">v1.5.1</a><br>
+            <a href="http://adf.ly/1kysPF">v1.5</a><br>
+            <a href="http://adf.ly/1eceGL">v1.4</a><br>
+          </center>
+        </div>
+        <div id="1.9.4 Dessertcraft" class="Dessertcraft" style="display: none;">
+          <center>
+            <h3>Dessertcraft 1.9.4</h3>
+            <a href="http://riffhold.com/26Uy">v1.6</a><br>
+            <a href="http://adf.ly/1l25BN">v1.5.1</a><br>
+            <a href="http://adf.ly/1kysPE">v1.5</a><br>
+            <a href="http://adf.ly/1eceE6">v1.4</a><br>
+          </center>
+        </div>
+        <div id="1.8.9 Dessertcraft" class="Dessertcraft" style="display: none;">
+          <center>
+            <h3>Dessertcraft 1.8.9</h3>
+            <a href="http://atominik.com/2cKD">v1.6</a><br>
+            <a href="http://adf.ly/1l258Z">v1.5.1</a><br>
+            <a href="http://adf.ly/1kysPD">v1.5</a><br>
+            <a href="http://adf.ly/1fJVTc">v1.4</a><br>
+          </center>
+        </div>
+        <div id="1.7.10 Dessertcraft" class="Dessertcraft" style="display: none;">
+          <center>
+            <h3>Dessertcraft 1.7.10</h3>
+            <a href="http://adf.ly/1l2569">v1.5.1</a><br>
+            <a href="http://adf.ly/1kysPC">v1.5</a><br>
+            <a href="http://adf.ly/1gxJnl">v1.4</a><br>
+            <a href="http://adf.ly/1Mw0y3">v1.3</a><br>
+          </center>
+        </div>
+        <div id="1.11 Emerald Tools" class="Emerald Tools" style="display: none;">
+          <center>
+            <h3>Emerald Tools 1.11</h3>
+            <a href="http://adf.ly/1gtOnE">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.10.2 Emerald Tools" class="Emerald Tools" style="display: none;">
+          <center>
+            <h3>Emerald Tools 1.10.2</h3>
+            <a href="http://adf.ly/1eceTf">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.9.4 Emerald Tools" class="Emerald Tools" style="display: none;">
+          <center>
+            <h3>Emerald Tools 1.9.4</h3>
+            <a href="http://adf.ly/1eceRH">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.8.9 Emerald Tools" class="Emerald Tools" style="display: none;">
+          <center>
+            <h3>Emerald Tools 1.8.9</h3>
+            <a href="http://adf.ly/1fJVbo">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.7.10 Emerald Tools" class="Emerald Tools" style="display: none;">
+          <center>
+            <h3>Emerald Tools 1.7.10</h3>
+            <a href="http://adf.ly/1bMvac">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.11 Extra Food" class="Extra Food" style="display: none;">
+          <center>
+            <h3>Extra Food 1.11</h3>
+            <a href="http://adf.ly/1gtP14">v1.2</a><br>
+          </center>
+        </div>
+        <div id="1.10.2 Extra Food" class="Extra Food" style="display: none;">
+          <center>
+            <h3>Extra Food 1.10.2</h3>
+            <a href="http://adf.ly/1ecefa">v1.2</a><br>
+          </center>
+        </div>
+        <div id="1.9.4 Extra Food" class="Extra Food" style="display: none;">
+          <center>
+            <h3>Extra Food 1.9.4</h3>
+            <a href="http://adf.ly/1ececd">v1.2</a><br>
+          </center>
+        </div>
+        <div id="1.8.9 Extra Food" class="Extra Food" style="display: none;">
+          <center>
+            <h3>Extra Food 1.8.9</h3>
+            <a href="http://adf.ly/1fJVfg">v1.2</a><br>
+            <a href="http://adf.ly/1Mw2gM">v1.1</a><br>
+            <a href="http://adf.ly/1Mw2QK">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.7.10 Extra Food" class="Extra Food" style="display: none;">
+          <center>
+            <h3>Extra Food 1.7.10</h3>
+            <a href="http://adf.ly/1bOd7u">v1.2</a><br>
+            <a href="http://adf.ly/1bMqvh">v1.1</a><br>
+          </center>
+        </div>
+        <div id="1.11 Obsidian Utilities" class="Obsidian Utilities" style="display: none;">
+          <center>
+            <h3>Obsidian Utilities 1.11</h3>
+            <a href="http://adf.ly/1gtP9f">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.10.2 Obsidian Utilities" class="Obsidian Utilities" style="display: none;">
+          <center>
+            <h3>Obsidian Utilities 1.10.2</h3>
+            <a href="http://adf.ly/1ecet3">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.9.4 Obsidian Utilities" class="Obsidian Utilities" style="display: none;">
+          <center>
+            <h3>Obsidian Utilities 1.9.4</h3>
+            <a href="http://adf.ly/1eceoq">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.8.9 Obsidian Utilities" class="Obsidian Utilities" style="display: none;">
+          <center>
+            <h3>Obsidian Utilities 1.8.9</h3>
+            <a href="http://adf.ly/1iK1Qw">v1.0.1</a><br>
+            <a href="http://adf.ly/1fJVmP">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.7.10 Obsidian Utilities" class="Obsidian Utilities" style="display: none;">
+          <center>
+            <h3>Obsidian Utilities 1.7.10</h3>
+            <a href="http://adf.ly/1iK1MF">v1.0.1</a><br>
+            <a href="http://adf.ly/1bL9RX">v1.0</a><br>
+            <a href="http://adf.ly/1Mw1SM">Dev</a><br>
+          </center>
+        </div>
+				<div id="1.11.2 Halloween Mod" class="Halloween Mod" style="display: none;">
+					<center>
+						<h3>Halloween Mod 1.11.2</h3>
+						<a href="http://j.gs/9dpQ">v1.0</a><br>
+					</center>
+				</div>
+        <div id="1.10.2 Halloween Mod" class="Halloween Mod" style="display: none;">
+          <center>
+            <h3>Halloween Mod 1.10.2</h3>
+            <a href="http://adf.ly/1fFpJg">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.9.4 Halloween Mod" class="Halloween Mod" style="display: none;">
+          <center>
+            <h3>Halloween Mod 1.9.4</h3>
+            <a href="http://adf.ly/1fFpHk">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.8.9 Halloween Mod" class="Halloween Mod" style="display: none;">
+          <center>
+            <h3>Halloween Mod 1.8.9</h3>
+            <a href="http://adf.ly/1fFg6W">v1.0</a><br>
+          </center>
+        </div>
+        <div id="1.7.10 Halloween Mod" class="Halloween Mod" style="display: none;">
+          <center>
+            <h3>Halloween Mod 1.7.10</h3>
+            <a href="http://adf.ly/1fFidu">v1.0</a><br>
+          </center>
+        </div>
+				<div id="1.8.9 InstaPlay" class="InstaPlay" style="display: none;">
+					<center>
+						<h3>InstaPlay 1.8.9</h3>
+						<a href="http://www.mediafire.com/file/hl8f3wy7g5jd5dr/InstaPlay-1.8.9-1.0.jar">v1.0</a><br>
+					</center>
+				</div>
+        <div id="errordiv" style="display: none;">
+          <center>
+            <h3 id="errortext">No downloads exist for *version* *mod*</h3>
+          </center>
+        </div>
+	    </div>
+		</div>
+    <footer>
+      <div class="container">
+        <div class="col-sm-6 text">
+          <p>Made with <span class="fa fa-heart fa-lg" aria-hidden="true"></span><span class="sr-only">love</span> by JGSB</p>
+        </div>
+        <div class="col-sm-6 icons">
+          <a href="https://www.youtube.com/user/JGSBroadcast">
+            <span class="fa-stack fa-lg">
+              <span class="fa fa-circle fa-stack-2x"></span>
+              <span class="fab fa-youtube fa-stack-1x"></span>
+            </span>
+            <span class="sr-only">YouTube</span>
+          </a>
+          <a>&nbsp;</a>
+          <a href="https://twitter.com/JGSBroadcast">
+            <span class="fa-stack fa-lg">
+              <span class="fa fa-circle fa-stack-2x"></span>
+              <span class="fab fa-twitter fa-stack-1x"></span>
+            </span>
+            <span class="sr-only">Twitter</span>
+          </a>
+          <a>&nbsp;</a>
+          <a href="https://plus.google.com/b/108514584765035958627/108514584765035958627">
+            <span class="fa-stack fa-lg">
+              <span class="fa fa-circle fa-stack-2x"></span>
+              <span class="fab fa-google-plus-g fa-stack-1x"></span>
+            </span>
+            <span class="sr-only">Google+</span>
+          </a>
+          <a>&nbsp;</a>
+          <a href="https://github.com/JGSBroadcast">
+            <span class="fa-stack fa-lg">
+              <span class="fa fa-circle fa-stack-2x"></span>
+              <span class="fab fa-github fa-stack-1x"></span>
+            </span>
+            <span class="sr-only">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    <!--Navbar-->
+		<script src="js/navbar.js"></script>
+		<!--Download Script-->
+	  <script src="js/dl.js"></script>
+		<!--Decode URL-->
+		<script>
+	    decodeurl();
+		</script>
+	</body>
+</html>
